@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             videoUrl: "https://www.youtube.com/embed/7yHnJ_oNxTI?si=vID-iVfZgxFGUyDe&autoplay=1&mute=1",
             description: "Brimstone é um controlador americano que utiliza seu arsenal orbital para dominar o campo de batalha. Ele pode usar Granadas Incendiárias, Fumaça Celeste para bloquear a visão e sua ultimate, Ataque Orbital, um ataque a laser devastador."
         }
-        // Adicione mais agentes aqui seguindo o mesmo formato
+        
     ];
 
     const agentListDiv = document.querySelector('.agent-list');
@@ -44,30 +44,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const agentVideoIframe = document.getElementById('agent-video');
     const agentDescriptionElement = document.getElementById('agent-description');
 
-    let activeAgentButton = null; // Variável para rastrear o botão ativo
+    let activeAgentButton = null; 
 
-    // Função para carregar os detalhes do agente
+   
     function loadAgentDetails(agent) {
         agentNameElement.textContent = agent.name;
-        // Definindo o src do iframe
         agentVideoIframe.src = agent.videoUrl;
         agentDescriptionElement.textContent = agent.description;
     }
 
-    // Função para criar e adicionar os botões dos agentes
+   
     function createAgentButtons() {
         agents.forEach(agent => {
             const button = document.createElement('button');
             button.classList.add('agent-button');
             button.textContent = agent.name;
             button.addEventListener('click', () => {
-                // Remove a classe 'active' do botão anterior, se houver
+                
                 if (activeAgentButton) {
                     activeAgentButton.classList.remove('active');
                 }
-                // Adiciona a classe 'active' ao botão clicado
                 button.classList.add('active');
-                activeAgentButton = button; // Atualiza o botão ativo
+                activeAgentButton = button; 
 
                 loadAgentDetails(agent);
             });
@@ -75,11 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Inicializa a página: cria os botões e carrega o primeiro agente
     createAgentButtons();
     if (agents.length > 0) {
         loadAgentDetails(agents[0]);
-        // Marca o primeiro botão como ativo ao carregar a página
         const firstButton = document.querySelector('.agent-button');
         if (firstButton) {
             firstButton.classList.add('active');

@@ -2,18 +2,18 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a2e; /* Azul escuro */
-    color: #e0e0e0; /* Cinza claro */
+    background-color: #1a1a2e; 
+    color: #e0e0e0; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #0f0f1d; /* Azul mais escuro */
+    background-color: #0f0f1d; 
     padding: 20px;
     text-align: center;
-    border-bottom: 3px solid #ff4655; /* Vermelho Valorant */
+    border-bottom: 3px solid #ff4655; 
 }
 
 h1 {
@@ -23,11 +23,11 @@ h1 {
 
 main {
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 30px; /* Espaçamento entre as seções */
+    gap: 30px; 
     padding: 20px;
-    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
+    flex-grow: 1;
 }
 
 .agent-list {
@@ -36,8 +36,8 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 250px;
-    max-height: 70vh; /* Altura máxima para a lista de agentes */
-    overflow-y: auto; /* Adiciona scroll se a lista for muito longa */
+    max-height: 70vh; 
+    overflow-y: auto; 
     border: 1px solid #2e2e4e;
 }
 
@@ -56,7 +56,7 @@ main {
 }
 
 .agent-button:hover {
-    background-color: #ff4655; /* Vermelho Valorant no hover */
+    background-color: #ff4655; 
     transform: translateX(5px);
 }
 
@@ -71,8 +71,8 @@ main {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    flex: 1; /* Ocupa o espaço restante */
-    min-width: 500px; /* Largura mínima para os detalhes */
+    flex: 1;
+    min-width: 500px;
     border: 1px solid #2e2e4e;
 }
 
@@ -85,7 +85,7 @@ h2 {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* Proporção 16:9 para vídeos responsivos */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
     margin-bottom: 20px;
@@ -114,11 +114,11 @@ footer {
     color: #888;
     text-align: center;
     padding: 15px;
-    margin-top: auto; /* Empurra o rodapé para baixo */
+    margin-top: auto; 
     border-top: 3px solid #ff4655;
 }
 
-/* Responsividade básica */
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;
@@ -131,6 +131,6 @@ footer {
     }
 
     .agent-details {
-        min-width: unset; /* Remove a largura mínima em telas menores */
+        min-width: unset; 
     }
 }
